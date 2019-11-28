@@ -4,7 +4,8 @@
   "description": "",
   "main": "axios1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "netlify-lambda serve -p 3000 src/lambda",
+    "build": "netlify-lambda build src/lambda"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,12 @@
     "axios": "^0.19.0",
     "faker": "^4.1.0",
     "lodash": "^4.17.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejoyoflife/subs-mgmt-crm-json-server.git"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3"
   }
 }
