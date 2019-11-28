@@ -98,7 +98,22 @@ const data = {
 };
 
 exports.handler = (event, context, callback) => {
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers":
+      "Origin, X-Requested-With, Content-Type, Accept"
+  };
+  if (event.httpMethod === "OPTIONS") {
+    const response = {
+      statusCode: 200,
+      headers: headers,
+      body: JSON.stringify({ message: "You can use CORS" })
+    };
+    callback(null, response);
+    return;
+  }
   callback(null, {
+    headers,
     statusCode: 200,
     body: JSON.stringify(data)
   });
