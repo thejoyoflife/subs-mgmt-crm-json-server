@@ -1,7 +1,3 @@
-[[build]]
+[build]
     Functions = "lambda"
     Command = "npm run build"
-[[redirects]]
-    from = "/wimeData"
-    to = "/.netlify/functions/wimeData"
-    status = 200    
